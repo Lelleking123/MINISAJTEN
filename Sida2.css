@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background: linear-gradient(120deg, gray, white); */
+  font-family: "Poppins", sans-serif;
+}
+
+#menu__toggle {
+  opacity: 0;
+}
+#menu__toggle:checked ~ .menu__box {
+  left: 0 !important;
+  background-color: gray;
+}
+
+header {
+  position: sticky;
+  background: rgb(128, 128, 128);
+  background: linear-gradient(
+    90deg,
+    rgba(128, 128, 128, 1) 0%,
+    rgb(169, 169, 169) 50%,
+    rgba(128, 128, 128, 1) 100%
+  );
+  height: 10vh;
+  box-shadow: rgb(81, 81, 81) 0px 5px 5px;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 60px;
+  width: 100px;
+}
+
+.menu__btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  transition-duration: 0.25s;
+}
+.menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #eceff1;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  transition-duration: 0.4s;
+}
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: 0.25s;
+}
+.menu__item:hover {
+  background-color: rgb(140, 140, 140);
+}
+
+/* HUVUDDELEN */
+
+.small-container {
+  max-width: 1000px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 20px;
+}
+
+.Rad {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.Stor-produktbild {
+  margin-top: 80px;
+}
+
+.Rad-små-bilder {
+  display: flex;
+  justify-content: space-around;
+}
+
+.kol-2 img {
+  max-width: 100%;
+  padding: 50px 0;
+}
+
+.small-img-col {
+  flex-basis: 24%;
+  cursor: pointer;
+}
+
+.Stor-produktbild .kol-2 img {
+  padding: 0;
+}
+
+.Stor-produktbild .kol-2 {
+  padding: 20px;
+}
+
+.kol-2 {
+  flex-basis: 50%;
+  min-width: 300px;
+}
+
+.kol-2 h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin: 25px 0;
+}
+
+.Stor-produktbild select {
+  display: block;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.Stor-produktbild h2 {
+  margin: 20px 0;
+  font-size: 22px;
+  font-weight: bold;
+  animation: fadeInOut 2s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.Stor-produktbild input {
+  width: 50px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 20px;
+  margin-right: 10px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+input:focus {
+  outline: none;
+}
+
+select:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.btn {
+  display: inline-block;
+  background-color: rgb(57, 179, 224);
+  padding: 8px 24px;
+  margin: 28px 0;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: rgb(27, 149, 194);
+}
+
+/* CSS Till Footern */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #302f49;
+  margin-top: 80px;
+  height: 250px;
+}
+
+.Powered-by {
+  color: #fff;
+  padding: 15px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-links .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.footer-links .links span {
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.footer-links .links a {
+  text-decoration: none;
+  color: #a1a1a1;
+  padding: 10px 20px;
+  transition: 0.5s;
+}
+
+.footer-links .links a:hover {
+  color: #828282;
+  transform: scale(110%);
+  transition: 0.5;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    height: 7vh;
+  }
+  .logo {
+    width: 70px;
+    height: 60px;
+  }
+  .menu__btn {
+    top: 20px;
+    left: 10px;
+  }
+  .links {
+    width: 10px;
+  }
+  .Powered-by {
+    width: 150px;
+  }
+}

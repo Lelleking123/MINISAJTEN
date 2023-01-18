@@ -1,0 +1,319 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#menu__toggle {
+  opacity: 0;
+}
+#menu__toggle:checked ~ .menu__box {
+  left: 0 !important;
+  background-color: gray;
+}
+
+.meny {
+  position: sticky;
+}
+
+header {
+  background: rgb(128, 128, 128);
+  background: linear-gradient(
+    90deg,
+    rgba(128, 128, 128, 1) 0%,
+    rgb(169, 169, 169) 50%,
+    rgba(128, 128, 128, 1) 100%
+  );
+  height: 10vh;
+  box-shadow: rgb(81, 81, 81) 0px 5px 5px;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 60px;
+  width: 100px;
+}
+
+.menu__btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  transition-duration: 0.25s;
+}
+.menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #eceff1;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  transition-duration: 0.4s;
+}
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: 0.25s;
+}
+.menu__item:hover {
+  background-color: rgb(117, 117, 117);
+}
+
+#Produktbild {
+  /* aspect-ratio: 1/1; */
+  width: 100%;
+  height: 500px;
+  margin-top: 50px;
+  margin-left: 150px;
+}
+
+.Huvuddel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 520px;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url("https://cdn.shopify.com/s/files/1/0644/0874/8300/products/5_357d30c6-0894-4a89-8ebe-7a63e532c0df.png?v=1669774272&width=1445");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Huvuddel h1 {
+  font-family: sans-serif;
+  font-size: 60px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.Huvuddel p {
+  font-size: 20px;
+  color: #d1d1d1;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.Huvuddel button {
+  background-color: #5edaf0;
+  color: #000;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 0px 26px rgba(255, 255, 255, 0.4);
+  transition: 1s;
+}
+
+.Huvuddel button:hover {
+  transform: scale(105%);
+  transition: 1s;
+}
+
+/* Alla fontawesome ikoner */
+
+.icon {
+  display: flex;
+}
+
+/* --------------------------- */
+
+.information-företag {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 80px;
+}
+
+.information-företag .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.information-företag .info i {
+  width: fit-content;
+  font-size: 50px;
+  color: #333333;
+  border-radius: 50%;
+  padding: 12px;
+}
+
+.information-företag .info .info-heading {
+  font-size: 22px;
+  color: #333333;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.information-företag .info .info-text {
+  font-size: 20px;
+  color: #585858;
+  margin: 10px 0;
+}
+
+.Syfte {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 80px;
+  border-top: 2px solid #eeeeee;
+}
+
+.Syfte img {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.Syfte-text h2 {
+  font-size: 30px;
+  color: #333333;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.Syfte-text p {
+  font-size: 25px;
+  color: #585858;
+  margin: 10px 0;
+}
+
+.Syfte-text p::first-line {
+  font-weight: bold;
+}
+
+/* CSS Till Footern */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #302f49;
+  margin-top: 80px;
+  height: 250px;
+}
+
+.Powered-by {
+  color: #fff;
+  padding: 15px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-links .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.footer-links .links span {
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.footer-links .links a {
+  text-decoration: none;
+  color: #a1a1a1;
+  padding: 10px 20px;
+  transition: 0.5s;
+}
+
+.footer-links .links a:hover {
+  color: #828282;
+  transform: scale(110%);
+  transition: 0.5;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    height: 7vh;
+  }
+  .logo {
+    width: 70px;
+    height: 60px;
+  }
+  .Huvuddel h1 {
+    font-size: 36px;
+  }
+  .menu__btn {
+    top: 20px;
+    left: 10px;
+  }
+  .information-företag .info {
+    width: 40px;
+    font-size: 14;
+  }
+  .Syfte-text h2 {
+    font-size: 17;
+  }
+  .Syfte-text p {
+    font-size: 14px;
+  }
+  .links {
+    width: 10px;
+  }
+  .Powered-by {
+    width: 150px;
+  }
+}
+
+/* @media screen and (min-width: 768px)  */
+/* BEHÖVDES INTE RIKTIGT */

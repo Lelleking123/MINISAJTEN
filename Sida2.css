@@ -7,7 +7,7 @@
 }
 
 body {
-  /* background: linear-gradient(120deg, gray, white); */
+  background: linear-gradient(120deg, gray, white);
   font-family: "Poppins", sans-serif;
 }
 
@@ -16,7 +16,7 @@ body {
 }
 #menu__toggle:checked ~ .menu__box {
   left: 0 !important;
-  background-color: gray;
+  background-color: rgb(128, 128, 128);
 }
 
 header {

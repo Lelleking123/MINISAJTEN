@@ -14,14 +14,11 @@ body {
 }
 #menu__toggle:checked ~ .menu__box {
   left: 0 !important;
-  background-color: gray;
-}
-
-.meny {
-  position: sticky;
+  background-color: rgb(128, 128, 128);
 }
 
 header {
+  position: sticky;
   background: rgb(128, 128, 128);
   background: linear-gradient(
     90deg,
